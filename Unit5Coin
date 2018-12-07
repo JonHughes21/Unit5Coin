@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class Unit5Coin {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+      
+		int num, heads = 0, tails = 0;
+		System.out.println("Enter 1 to Toss Coin");
+		System.out.println("Enter 2 to exit");
+		num = input.nextInt();
+      
+		while (num != 2) {
+			if (num == 1) {
+				if (Toss() == true) {
+					heads++;
+					System.out.printf("\nIt was heads!\nHeads: %d\nTails: %d\n", heads, tails);  
+				}
+				else {
+					tails++;
+					System.out.printf("\nIt was tails!\nHeads: %d\nTails: %d\n", heads, tails);    			  
+				}
+			}
+			else
+				System.out.println("Please enter a valid input");
+    	  
+			System.out.println("\nEnter 1 to Toss Coin");
+			System.out.println("Enter 2 to exit");
+			num = input.nextInt();
+		}      
+	}
+	public static boolean Toss() {
+		int toss = (int) (Math.random() * 2 + 1);
+      
+		if (toss == 1)
+			return true;
+		else
+			return false;
+	}
+}
