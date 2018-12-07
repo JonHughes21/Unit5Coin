@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Points {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		System.out.println("Please enter your grade average");
+		int avg = input.nextInt();
+		qualityPoints (avg);
+	}
+	public static void qualityPoints(int avg) {
+		if (avg <= 100 && avg >= 90)
+			System.out.println("4");
+		else if (avg <= 89 && avg >= 80)
+            System.out.println("3");
+		else if (avg <= 79 && avg >= 70)
+            System.out.println("2");
+		else if (avg <= 69 && avg >= 60)
+            System.out.println("1");
+		else if (avg < 60 && avg >= 0)
+            System.out.println("0");
+		else
+            System.out.println("Please enter a valid average");
+   }
+}
