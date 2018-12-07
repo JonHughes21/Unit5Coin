@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Area {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+      
+		int radius;
+		System.out.println("Enter the radius of a circle to find the area");
+		radius = input.nextInt();
+		circleArea (radius);
+	}
+	public static void circleArea(int x) {
+		double area = (Math.PI) * x * x;
+		System.out.printf("A circle with a radius of %d has an area of %.2f", x, area);
+	}
+}
